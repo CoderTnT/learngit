@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)#signin -->
+<html lang="zh-CN" dropeffect="none" xmlns:th="http://www.thymeleaf.org" class="js is-AppPromotionBarVisible cssanimations csstransforms csstransitions flexbox no-touchevents no-mobile" style="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script type="text/javascript" async="" src="../scripts/za-0.1.1.min.js"></script>
+    <script async="" src="../scripts/ga.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-ZA-Response-Id" content="46acde5c53db46f2806ccad726de9826"/>
+    <title>首页</title>
+    <meta name="apple-itunes-app" content="app-id=432274380"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+    <meta id="znonce" name="znonce" content="d3edc464cf014708819feffde7ddd01e"/>
+
+    <link rel="stylesheet" type="text/css" href="../styles/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/font-awesome.min.css"/>
+
+    <link rel="search" type="application/opensearchdescription+xml" href="" title=""/>
+    <link rel="stylesheet" href="../styles/index.css"/>
+    <style>
+        .zm-item-answer-author-info a.collapse {margin-top: 0}
+    </style>
+
+</head>
+<body class="zhi ">
+<div th:replace="head :: head">
+
+</div>
+
+
+
+
+<link rel="stylesheet" media="all" href="../styles/letter.css"/>
+
+
+
+
+<div id="main">
+    <div class="zg-wrap zu-main clearfix ">
+        <ul class="letter-list">
+
+            <li id="msg-item-4009580" th:each="vo:${viewObjectList}">
+                <a class="list-head">
+                    <img alt="头像" th:src="${vo.map['user'].headUrl}"/>
+                </a>
+                <!--<div class="tooltip fade right in">-->
+                    <div class="tooltip-arrow"></div>
+                    <div class="tooltip-inner letter-chat clearfix">
+                        <div class="letter-info">
+                            <p class="l-time" th:text="${#dates.format(vo.map['message'].createdDate,'yyyy-MM-dd HH:mm:ss')}">sdfsdfsdf</p>
+                            <!-- <a href="javascript:void(0);" id="del-link" name="4009580">删除</a> -->
+                        </div>
+                        <p class="letter-detail" th:text="${vo.map['message'].content}">
+                            sdfsdfsdf
+                        </p>
+                    </div>
+
+                <!--</div>-->
+            </li>
+
+
+        </ul>
+
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="/scripts/main/jquery.js"></script>
+<script type="text/javascript" src="/scripts/main/base/base.js"></script>
+<script type="text/javascript" src="/scripts/main/base/util.js"></script>
+<script type="text/javascript" src="/scripts/main/base/event.js"></script>
+<script type="text/javascript" src="/scripts/main/util/action.js"></script>
+<script type="text/javascript" src="/scripts/main/component/component.js"></script>
+<script type="text/javascript" src="/scripts/main/component/popup.js"></script>
+<script type="text/javascript" src="/scripts/main/component/popupAdd.js"></script>
+<script type="text/javascript" src="/scripts/main/component/popupMsg.js"></script>
+<script type="text/javascript" src="/scripts/main/site/home.js"></script>
+<script type="text/javascript" src="/scripts/main/site/detail.js"></script>
+</body></html>

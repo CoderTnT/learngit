@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<body>
+
+<pre>
+
+    <p th:text="${value}">你好</p>
+
+
+    hello
+
+    <p>${value}</p>
+
+    ${value}
+
+    <tr th:each="color : ${colors}">
+        <td th:text="${color}"></td>
+
+
+
+    </tr>
+
+
+       <tr th:each="vo : ${viewObjects}">
+           <td th:text="${vo.map['question']}">lalaaaaaalalalalal</td>
+       </tr>
+
+
+</pre>
+
+
+</body>
+
+</html>

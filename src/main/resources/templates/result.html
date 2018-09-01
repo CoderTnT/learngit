@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)#signin -->
+<html lang="zh-CN" dropeffect="none" xmlns:th="http://www.thymeleaf.org" class="js is-AppPromotionBarVisible cssanimations csstransforms csstransitions flexbox no-touchevents no-mobile" style="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script type="text/javascript" async="" src="../scripts/za-0.1.1.min.js"></script>
+    <script async="" src="../scripts/ga.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-ZA-Response-Id" content="46acde5c53db46f2806ccad726de9826"/>
+    <title>首页 </title>
+    <meta name="apple-itunes-app" content="app-id=432274380"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+    <meta id="znonce" name="znonce" content="d3edc464cf014708819feffde7ddd01e"/>
+
+    <link rel="stylesheet" href="../styles/index.css"/>
+    <style>
+        .zm-item-answer-author-info a.collapse {margin-top: 0}
+    </style>
+
+   <!-- #set($bodyclass = "page-search") -->
+
+</head>
+<body class="zhi ">
+<div th:replace="head :: head">
+
+</div>
+
+
+
+<link rel="stylesheet" href="../styles/result.css" />
+<link rel="stylesheet" href="../styles/detail.css" />
+<div class="zg-wrap zu-main clearfix" role="main">
+    <div class="zu-main-content">
+        <div class="zu-main-content-inner">
+            <ul class="list contents navigable">
+
+                <li class="item clearfix" th:each="vo :${viewObjects}">
+                    <div class="feed-title">
+                        <a target="_blank" th:href="@{'/user/'+${vo.map['user'].id}}" class="js-title-link" th:utext="${vo.map['question'].title}"></a>
+                    </div>
+                    <div class="content">
+
+                        <ul class="answers">
+                            <li class="zh-summary summary clearfix">
+                                <div class="entry answer">
+                                    <div class="entry-left hidden-phone">
+                                        <a class="zm-item-vote-count hidden-expanded js-expand js-vote-count" data-bind-votecount="" th:text="${vo.map['followerCount']}"></a>
+                                    </div>
+                                    <div class="entry-body">
+                                        <div class="entry-meta">
+                                            <strong class="author-line" th:text="${#dates.format(vo.map['question'].createdDate,'yyyy-MM-dd HH:mm:ss')}"><a class="author" th:href="@{'/user/'+${vo.map['user'].id}}" th:text="${vo.map['user'].name}"></a>，</strong>
+                                        </div>
+                                        <div class="entry-content js-collapse-body">
+                                            <div class="summary hidden-expanded" style="" th:utext="${vo.map['question'].content}">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="/scripts/main/jquery.js"></script>
+<script type="text/javascript" src="/scripts/main/base/base.js"></script>
+<script type="text/javascript" src="/scripts/main/base/util.js"></script>
+<script type="text/javascript" src="/scripts/main/base/event.js"></script>
+<script type="text/javascript" src="/scripts/main/util/action.js"></script>
+<script type="text/javascript" src="/scripts/main/util/business.js"></script>
+<script type="text/javascript" src="/scripts/main/component/component.js"></script>
+<script type="text/javascript" src="/scripts/main/component/popup.js"></script>
+<script type="text/javascript" src="/scripts/main/component/popupAdd.js"></script>
+<script type="text/javascript" src="/scripts/main/component/popupMsg.js"></script>
+<script type="text/javascript" src="/scripts/main/site/home.js"></script>
+</body>
+
+</html>>
